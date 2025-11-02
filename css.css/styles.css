@@ -5441,3 +5441,9 @@ color: var(--color-label-light-tertiary-30);
 
 @media (max-height: 375px) {
 }
+
+
+body * {
+  font-family: 'Roboto', sans-serif !important;
+  color: red !important; /* Чтобы сразу увидеть что применилось */
+}
