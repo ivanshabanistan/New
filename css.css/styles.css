@@ -1,6 +1,6 @@
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url('fonts/HelveticaNeueCyr/woff2/HelveticaNeueCyr-Roman.woff2') format('woff2');
+  src: url('/fonts/HelveticaNeueCyr/woff2/HelveticaNeueCyr-Roman.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url('fonts/HelveticaNeueCyr/woff2/HelveticaNeueCyr-Medium.woff2') format('woff2');
+  src: url('/fonts/HelveticaNeueCyr/woff2/HelveticaNeueCyr-Medium.woff2') format('woff2');
   font-weight: 550;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  src: url('fonts/HelveticaNeueCyr/woff2/HelveticaNeueCyr-Bold.woff2') format('woff2');
+  src: url('/fonts/HelveticaNeueCyr/woff2/HelveticaNeueCyr-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: "Micro Technic Extended [RUS by";
-  src: url('fonts/microtechnicextendedrusby_bold/woff2/microtechnicextendedrusby_bold.woff2') format('woff2');
+  src: url('/fonts/microtechnicextendedrusby_bold/woff2/microtechnicextendedrusby_bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -623,15 +623,18 @@ a {
 .menu-link {
   height: 100%;
   align-items: center;
+  font-family: var(--font-family);
   font-weight: var(--font-weight-roman);
   font-size: var(--font-size-body-2);
   line-height: var(--font-line-height-body-2);
   letter-spacing: var(--font-letter-spacing-body-2-roman);
-  padding-top: 4.5px;
-  border-bottom: 2px solid transparent; /* зарезервировано место под подчеркивание при ховере / активном состоянии */
+  padding-top: 5px;
+  border-bottom: 2.5px solid transparent; /* зарезервировано место под подчеркивание при ховере / активном состоянии */
+  transition: border-bottom 0.5s ease-out;
+  
 }
 .menu-link:hover {
-  border-bottom: 2px solid var(--color-label-light-primary-100);
+  border-bottom: 2.5px solid var(--color-label-light-primary-100);
   transition: 0.14s;
 }
 
@@ -652,7 +655,7 @@ a {
   font-size: var(--font-size-body-2);
   line-height: var(--font-line-height-body-2);
   letter-spacing: var(--font-letter-spacing-body-2-roman);
-  padding-top: 6px;
+  padding-top: 5px;
   border-bottom: 2px solid var(--color-label-light-primary-100); /* цвет подчеркивания активного пункта меню */
 }
 
@@ -683,6 +686,7 @@ a {
   border-color: transparent;
   background-color: transparent;
   color: var(--color-label-light-tertiary-30);
+  transition: color 0.5s ease-out;
 }
 .button-copy:hover {
   color: var(--color-label-light-primary-100);
@@ -899,7 +903,7 @@ a {
   padding-top: 2px;
   border-radius: 15px;
   color: var(--color-label-light-primary-100);
-  transition: 0.15s ease-out;
+  transition: background-color 1.5s ease-out, color 1s ease-out;
 
   font-size: var(--font-size-caption);
   letter-spacing: var(--font-letter-spacing-caption);
@@ -919,6 +923,8 @@ a {
   letter-spacing: var(--font-letter-spacing-caption);
   font-weight: var(--font-weight-roman);
   line-height: var(--font-line-height-caption);
+
+  transition: 0.14s;
 }
 
 .tabbar__icons {
@@ -938,11 +944,13 @@ a {
 .tab-icon-inactive {
   height: 24px;
   color: var(--color-label-light-tertiary-30);
+  transition: color 0.5s ease-out;
 }
 
 .tab-icon-inactive:hover {
   height: 24px;
   color: var(--color-label-light-primary-100);
+  transition: 0.14s;
 }
 
 
@@ -1290,7 +1298,7 @@ color: var(--color-label-light-tertiary-30);
   text-align: center;
   font-variant-numeric: stacked-fractions;
   font-feature-settings: 'cpsp' on;
-  font-family: HelveticaNeueCyr;
+  font-family: var(--font-family);
   font-size: 11px;
   font-style: normal;
   font-weight: 400;
@@ -2198,14 +2206,14 @@ color: var(--color-label-light-tertiary-30);
 /* Кнопка «Смотреть кейс» */
 
 .button-24px {
-  padding: 5px 7px 2px 7px;
+  padding: 5px 8px 2px 8px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   height: 24px;
   border-radius: 28px;
   background-color: var(--color-systemBackgrounds-light-primary-100);
-  border: 1px solid var(--color-separator-light-transparent-36);
+  border: 1.8px solid var(--color-label-light-tertiary-30);
   text-decoration: none;
   position: relative;
   overflow: hidden;
@@ -2223,7 +2231,7 @@ color: var(--color-label-light-tertiary-30);
 
 .button-24px:hover {
   background-color: var(--color-systemBackgrounds-dark-primary-100);
-  border: 1px solid var(--color-separator-light-transparent-36);
+  border: 1.8px solid var(--color-separator-light-transparent-36);
   cursor: pointer;
   transition: background-color 0.01s ease; /* Быстрое изменение при наведении */
 }
@@ -3922,6 +3930,9 @@ color: var(--color-label-light-tertiary-30);
     bottom: 4px;
   }
 
+  .button-24px-email {
+    display: none;
+  }
 
   .first-screen-grid {
     display: grid;
