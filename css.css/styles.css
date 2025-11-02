@@ -1,6 +1,6 @@
-/* @font-face {
+@font-face {
   font-family: "HelveticaNeueCyr";
-  /* src: url('fonts/HelveticaNeueCyr/woff2/HelveticaNeueCyr-Roman.woff2') format('woff2'); */
+  src: url('fonts/HelveticaNeueCyr/woff2/HelveticaNeueCyr-Roman.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  /* src: url('fonts/HelveticaNeueCyr/woff2/HelveticaNeueCyr-Medium.woff2') format('woff2'); */
+  src: url('fonts/HelveticaNeueCyr/woff2/HelveticaNeueCyr-Medium.woff2') format('woff2');
   font-weight: 550;
   font-style: normal;
   font-display: swap;
@@ -16,13 +16,11 @@
 
 @font-face {
   font-family: "HelveticaNeueCyr";
-  /* src: url('fonts/HelveticaNeueCyr/woff2/HelveticaNeueCyr-Bold.woff2') format('woff2'); */
+  src: url('fonts/HelveticaNeueCyr/woff2/HelveticaNeueCyr-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-} */
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+}
 
 @font-face {
   font-family: "Micro Technic Extended [RUS by";
@@ -374,8 +372,7 @@ svg * {
 body {
   background-color: var(--color-systemBackgrounds-light-primary-100);
   color: var(--color-label-light-primary-100);
-  /* font-family: var(--font-family); */
-	font-family:'Roboto', sans-serif !important;
+  font-family: var(--font-family);
   font-size: var(--font-size-body-2);
   font-weight: var(--font-weight-roman);
   letter-spacing: var(--font-letter-spacing-body-2-medium);
@@ -405,16 +402,15 @@ html::-webkit-scrollbar {
 .custom-scrollbar {
   position: fixed;
   right: 0;
-  top: calc(36px + 32px);
   top: 68px;
-  bottom: 36px;
+  /* top: 36px; */
+  bottom: 4px;
   width: 8px;
   z-index: 1000;
   opacity: 0.3;
   pointer-events: none;
 }
 
-/* Состояния анимации */
 .custom-scrollbar.appearing {
   opacity: 1;
   transition: opacity 0.1s ease-out;
@@ -425,7 +421,6 @@ html::-webkit-scrollbar {
   transition: opacity 2s ease-out;
 }
 
-/* Ползунок */
 .custom-scrollbar::after {
   content: '';
   position: absolute;
@@ -440,6 +435,81 @@ html::-webkit-scrollbar {
     height 0.2s ease-out;
   will-change: transform, height;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Кастомный скроллбар с Difference фона */
+/* .custom-scrollbar {
+  position: fixed;
+  right: 0;
+  top: 68px;
+  bottom: 36px;
+  width: 8px;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.custom-scrollbar::after {
+  content: '';
+  position: absolute;
+  right: 3px;
+  width: 2px;
+  border-radius: 2px;
+  background: transparent;
+  height: var(--thumb-height, 100px);
+   transform: translate3d(0, var(--thumb-position, 0), 0);
+  
+  transition:
+    transform 0.13s ease-out,
+    height 0.2s ease-out,
+    opacity 2s ease-out;
+  
+  will-change: transform, height;
+  
+  backdrop-filter: invert(1) hue-rotate(180deg) contrast(1.5) blur(7px);
+  -webkit-backdrop-filter: invert(1) hue-rotate(180deg) contrast(1.5) blur(7px);
+  
+  opacity: 0.3;
+  
+}
+
+.custom-scrollbar.appearing::after {
+  opacity: 1;
+  transition: 
+    transform 0.13s ease-out,
+    height 0.2s ease-out,
+    opacity 0.1s ease-out;
+}
+
+.custom-scrollbar.disappearing::after {
+  opacity: 0.3;
+  transition: 
+    transform 0.13s ease-out,
+    height 0.2s ease-out,
+    opacity 2s ease-out;
+} */
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -458,6 +528,7 @@ a {
 }
 
 .font-body-2-roman {
+  font-family: var(--font-family);
   font-size: var(--font-size-body-2);
   font-weight: var(--font-weight-roman);
   letter-spacing: var(--font-letter-spacing-body-2-roman);
@@ -465,6 +536,7 @@ a {
 }
 
 .font-body-2-medium {
+  font-family: var(--font-family);
   font-size: var(--font-size-body-2);
   font-weight: var(--font-weight-medium);
   letter-spacing: var(--font-letter-spacing-body-2-medium);
@@ -946,8 +1018,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  /* font-family: var(--font-family); */
-	font-family:'Roboto', sans-serif !important;
+  font-family: var(--font-family);
   font-size: 24px;
   line-height: 22px;
   letter-spacing: 0px;
@@ -959,8 +1030,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  /* font-family: var(--font-family); */
-	font-family:'Roboto', sans-serif !important;
+  font-family: var(--font-family);
   font-size: 24px;
   line-height: 22px;
   letter-spacing: 0px;
@@ -1081,8 +1151,7 @@ a {
 }
 
 .awards-number {
- /* font-family: var(--font-family); */
-	font-family:'Roboto', sans-serif !important;
+ font-family: var(--font-family);
  font-weight: var(--font-weight-roman);
  font-size: 39.8px;
  letter-spacing: -1.35px;
@@ -1111,8 +1180,7 @@ a {
 
 .button-details {
   position: absolute;
-  /* font-family: var(--font-family); */
-	font-family:'Roboto', sans-serif !important;
+  font-family: var(--font-family);
   font-weight: var(--font-weight-roman);
   font-size: var(--font-size-caption);
   letter-spacing: var(--font-letter-spacing-caption);
@@ -1222,8 +1290,7 @@ color: var(--color-label-light-tertiary-30);
   text-align: center;
   font-variant-numeric: stacked-fractions;
   font-feature-settings: 'cpsp' on;
-  /* font-family: HelveticaNeueCyr; */
-	font-family:'Roboto', sans-serif !important;
+  font-family: HelveticaNeueCyr;
   font-size: 11px;
   font-style: normal;
   font-weight: 400;
@@ -1487,11 +1554,21 @@ color: var(--color-label-light-tertiary-30);
 /* Блок с кнопкой «Все фрагменты» */
 
 .all-fragments-block {
-  height: 464px;
+  /* height: 464px; */
   display: flex;
   justify-content: center;
   align-items: center;
+  /* padding: 236px 0px 472px 0px; */
+  padding: 236px 0px 236px 0px;
 }
+
+/* .all-fragments-block {
+  height: 828px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+} */
 
 .button-32px {
   padding: 9px 14px 6px 14px;
@@ -1506,6 +1583,22 @@ color: var(--color-label-light-tertiary-30);
   overflow: hidden;
   cursor: pointer;
 }
+ 
+ /* .button-32px {
+  padding: 9px 14px 6px 14px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  border-radius: 28px;
+  background-color: var(--color-systemBackgrounds-dark-primary-100);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  grid-row-start: 2;
+  grid-row-end: 3;
+} */
 
 .blur-effect {
   position: absolute;
@@ -1551,8 +1644,7 @@ color: var(--color-label-light-tertiary-30);
 .awards-section-header,
 .section-header {
   width: 100%;
-  /* font-family: HelveticaNeueCyr; */
-	font-family:'Roboto', sans-serif !important;
+  font-family: HelveticaNeueCyr;
   font-size: var(--font-size-caption);
   font-weight: var(--font-weight-roman);
   letter-spacing: var(--font-letter-spacing-caption);
@@ -2171,10 +2263,10 @@ color: var(--color-label-light-tertiary-30);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 464px;
+  /* height: 464px; */
   align-items: center;
   gap: 12px;
-  padding: 0px 16px 0px 16px;
+  padding: 0px 16px 180px 16px;
 }
 
 .three-skills-section-header {
@@ -2505,7 +2597,7 @@ color: var(--color-label-light-tertiary-30);
 /* Блок с логотипом Awwwards */
 .awwwards-section-logo-description {
   display: flex;
-  padding: 0px 16px 4px 16px;
+  padding: 0px 16px 0px 16px;
   flex-direction: column;
   align-items: center;
   gap: 16px;
@@ -2755,12 +2847,20 @@ color: var(--color-label-light-tertiary-30);
 
 
 
+/* Фрагмент кейса на всю ширину */
+
+.single-picture {
+  padding: 0px 16px 0px 16px;
+}
+
+
+
 /* Описание кейса (1-ый блок) */
 
 .case-description {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 820px;
+  /* height: 820px; */
   gap: 16px;
   padding: 16px 16px 12px 16px;
 }
@@ -2822,6 +2922,7 @@ color: var(--color-label-light-tertiary-30);
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
+  padding: 236px 0px 236px 0px;
 }
 
 .case-description-main-header {
@@ -3051,10 +3152,11 @@ color: var(--color-label-light-tertiary-30);
 
 /* Блок с кнопкой «Смотреть кейс» */
 .watch-case-block {
-  height: 460px;
+  /* height: 460px; */
   display: flex;
   justify-content: center;
   align-items: start;
+  padding: 0px 0px 236px 0px;
 }
 
 
@@ -3087,6 +3189,7 @@ color: var(--color-label-light-tertiary-30);
   line-height: var(--font-line-height-body-1);
   color: var(--color-label-light-primary-100);
   text-align: center;
+  padding: 0px 16px 0px 16px;
 }
 
 .branding-section-example-block {
@@ -3149,7 +3252,7 @@ color: var(--color-label-light-tertiary-30);
   width: 100%;
   height: auto;
   align-items: center;
-  padding: 40px 0px 40px 0px;
+  padding: 140px 0px 140px 0px;
 }
 
 
@@ -3162,7 +3265,7 @@ color: var(--color-label-light-tertiary-30);
   justify-content: center;
   gap: 8px;
   width: 100%;
-  padding: 0px 0px 44px 0px;
+  padding: 0px 0px 216px 0px;
 }
 
 .inst-logo-text {
@@ -3212,7 +3315,7 @@ color: var(--color-label-light-tertiary-30);
   line-height: var(--font-line-height-body-1);
   color: var(--color-label-light-primary-100);
   text-align: center;
-  padding: 152px 16px 16px 16px;
+  padding: 0px 16px 16px 16px;
 }
 
 .geography-secttion-earth-icons {
@@ -3311,7 +3414,7 @@ color: var(--color-label-light-tertiary-30);
 .countries-block-flags {
   display: flex;
   align-items: center;
-  height: 28px;
+  height: 14px;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -3386,7 +3489,7 @@ color: var(--color-label-light-tertiary-30);
   padding: 16px 16px 16px 16px;
   align-items: center;
   justify-content: center;
-  padding: 248px 16px 448px 16px;
+  padding: 235px 16px 432px 16px;
 }
 
 .services-section-header {
@@ -3815,6 +3918,8 @@ color: var(--color-label-light-tertiary-30);
   /* Кастомный скроллбар */
     .custom-scrollbar {
     top: 36px;
+    /* top: 68px; */
+    bottom: 4px;
   }
 
 
@@ -3968,6 +4073,11 @@ color: var(--color-label-light-tertiary-30);
     line-height: var(--font-line-height-caption);
     color: var(--color-label-light-primary-100);
     padding: 1px 0px 0px 0px;
+  }
+
+  /* Навыки и треугольник */
+  .triangle-logo {
+    margin-top: 24%;    
   }
 
   /* Секция Awwwwards */
@@ -4131,7 +4241,12 @@ color: var(--color-label-light-tertiary-30);
 
 }
 
-@media (max-width: 1022px) {
+@media (max-width: 1038px) {
+  /* Навыки и треугольник */
+  .triangle-logo {
+    margin-top: 23%;    
+  }
+
 	/* Таблица с описанием кейса VelvetPath */
 	/* Ячейки заголовков колонок таблицы с описанием кейса VelvetPath */
 	.first-table-header-cell-content {
@@ -4153,6 +4268,11 @@ color: var(--color-label-light-tertiary-30);
 }
 
 @media (max-width: 925px) {
+  /* Навыки и треугольник */
+  .triangle-logo {
+    margin-top: 23%;    
+  }
+
 	/* Таблица с описанием кейса VelvetPath */
 	/* Ячейки тела таблицы с описанием кейса VelvetPath */
 	.first-table-body-cell-content {
@@ -4327,6 +4447,11 @@ color: var(--color-label-light-tertiary-30);
   justify-content: start;
 }
 
+/* Навыки и треугольник */
+  .triangle-logo {
+    margin-top: 22%;    
+  }
+
 /* Блок с заголовком кейса */
   .case-header-name {
     grid-column-start: 2;
@@ -4395,6 +4520,11 @@ color: var(--color-label-light-tertiary-30);
 }
 
 @media (max-width: 804px) {
+  /* Навыки и треугольник */
+  .triangle-logo {
+    margin-top: 22%;    
+  }
+
 	/* Таблица с описанием кейса VelvetPath */
 	/* Ячейки тела таблицы с описанием кейса VelvetPath */
 	.first-table-body-cell-content {
@@ -4416,6 +4546,11 @@ color: var(--color-label-light-tertiary-30);
 }
 
 @media (max-width: 744px) {
+  /* Навыки и треугольник */
+  .triangle-logo {
+    margin-top: 22%;    
+  }
+
   /* Секция обратной связи */
   .contacts-section {
     height: 768px;
@@ -4505,6 +4640,11 @@ color: var(--color-label-light-tertiary-30);
 }
 
 @media (max-width: 654px) {
+  /* Навыки и треугольник */
+  .triangle-logo {
+    margin-top: 21%;    
+  }
+
 	/* Таблица с описанием кейса VelvetPath */
 	/* Ячейки тела таблицы с описанием кейса VelvetPath */
 	.first-table-body-cell-content {
@@ -4765,6 +4905,10 @@ color: var(--color-label-light-tertiary-30);
     display: none;
   }
   
+  /* Навыки и треугольник */
+  .triangle-logo {
+    margin-top: 20%;    
+  }
 
 }
 
@@ -4788,6 +4932,11 @@ color: var(--color-label-light-tertiary-30);
 }
 
 @media (max-width: 544px) {
+ /* Навыки и треугольник */
+  .triangle-logo {
+    margin-top: 20%;    
+  }
+
 /* Таблица с описанием наград на Behance */
 .table {
   display: grid;
@@ -5041,6 +5190,15 @@ color: var(--color-label-light-tertiary-30);
   height: 62.5px;
 }
 
+
+/* Блок с флагами и странами */
+.countries-block-countries-list {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
 .countries-block-senior-info {
   grid-column-start: 3;
   grid-column-end: 5;
@@ -5067,7 +5225,10 @@ color: var(--color-label-light-tertiary-30);
 }
 
 @media (max-width: 524px) {
-
+  /* Навыки и треугольник */
+  .triangle-logo {
+    margin-top: 19%;    
+  }
 }
 
 @media (max-width: 520px) {
@@ -5077,6 +5238,11 @@ color: var(--color-label-light-tertiary-30);
 }
 
 @media (max-width: 488px) {
+  /* Навыки и треугольник */
+  .triangle-logo {
+    margin-top: 18%;    
+  }
+
   /* Секция Awwwwards */
   .awwwards-subheader-block {
     padding: 8px 16px 0px 14px;
@@ -5249,6 +5415,10 @@ color: var(--color-label-light-tertiary-30);
   .triangle-logo {
     grid-column: 1 / 2;
   }
+
+  .triangle-logo {
+    margin-top: 24%;    
+  }
   
   /* Секция о брендинге */
   .branding-header-block {
@@ -5269,6 +5439,11 @@ color: var(--color-label-light-tertiary-30);
 }
 
 @media (max-width: 424px) {
+  /* Навыки и треугольник */
+  .triangle-logo {
+    margin-top: 23%;    
+  }
+
   /* Описание кейса (1-ый блок) */
   .case-picture-description {
     grid-auto-rows: min-content; /* Строки дочерней сетки по контенту */
@@ -5353,6 +5528,11 @@ color: var(--color-label-light-tertiary-30);
     backdrop-filter: blur(10px);
   }
 
+  /* Навыки и треугольник */
+  .triangle-logo {
+    margin-top: 22%;    
+  }
+
   /* Секция обратной связи */
   .contacts-section-link-mail {
     font-family: var(--font-family);
@@ -5374,6 +5554,10 @@ color: var(--color-label-light-tertiary-30);
 
   .contacts-section-button-copy {
     margin-left: 2px; /* отступ от текста */
+  }
+
+  .plus-icon {
+    display: none;
   }
 }
 
@@ -5440,10 +5624,4 @@ color: var(--color-label-light-tertiary-30);
 }
 
 @media (max-height: 375px) {
-}
-
-
-body * {
-  font-family: 'Roboto', sans-serif !important;
-  color: red !important; /* Чтобы сразу увидеть что применилось */
 }
