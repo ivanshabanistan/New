@@ -789,6 +789,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
+
+
+// Единый код для слайдера
+
+
+
+
+
+
+
+
+
+
 // Перемешивание слайдов
 
 document.addEventListener('DOMContentLoaded', function() {

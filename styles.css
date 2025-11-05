@@ -1199,13 +1199,55 @@ a {
 
 
 
+/* Фиксируем размеры SVG элементов */
+.logo-award {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.logo-awards {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.single-award {
+  width: 18px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+/* Убираем возможные transition для SVG */
+.logo-awards,
+.single-award,
+.logo-award {
+  transition: none !important;
+  transform: none !important;
+}
+
+/* Улучшаем обработку касаний на мобильных */
+@media (hover: none) and (pointer: coarse) {
+  .awards-slides {
+    touch-action: pan-y pinch-zoom;
+  }
+  
+  .slider-control__left-side,
+  .slider-control__right-side {
+    min-height: 44px; /* Минимальный размер для касания */
+  }
+}
+
+
+
 .awards-title {
   font-size: var(--font-size-caption);
   line-height: var(--font-line-height-caption);
   font-weight: var(--font-weight-roman);
   color: var(--color-label-light-secondary-60);
   letter-spacing: 0.15px;
-  padding-block: 1px 5px;
+  /* padding-block: 1px 5px; */
+  padding: 6px 0px 0px 0px;
 }
 
 .single-award-number {
