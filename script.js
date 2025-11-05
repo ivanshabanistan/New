@@ -542,48 +542,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Блок с наградами
 
-// document.addEventListener('DOMContentLoaded', function() {
-//   const slides = document.querySelectorAll('.award-slide');
-//   const dots = document.querySelectorAll('.dot');
-//   const prevButton = document.querySelector('.slider-control__left-side');
-//   const nextButton = document.querySelector('.slider-control__right-side');
-//   let currentSlide = 0;
-//   const totalSlides = slides.length;
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.award-slide');
+  const dots = document.querySelectorAll('.dot');
+  const prevButton = document.querySelector('.slider-control__left-side');
+  const nextButton = document.querySelector('.slider-control__right-side');
+  let currentSlide = 0;
+  const totalSlides = slides.length;
 
-//   // Функция для показа конкретного слайда
-//   function showSlide(index) {
-//     // Корректировка индекса для циклического перехода
-//     currentSlide = (index + totalSlides) % totalSlides;
+  // Функция для показа конкретного слайда
+  function showSlide(index) {
+    // Корректировка индекса для циклического перехода
+    currentSlide = (index + totalSlides) % totalSlides;
 
-//     // Удаляем класс active у всех слайдов и точек
-//     slides.forEach(slide => slide.classList.remove('active'));
-//     dots.forEach(dot => dot.classList.remove('active'));
+    // Удаляем класс active у всех слайдов и точек
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
 
-//     // Добавляем класс active текущему слайду и точке
-//     slides[currentSlide].classList.add('active');
-//     dots[currentSlide].classList.add('active');
-//   }
+    // Добавляем класс active текущему слайду и точке
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+  }
 
-//   // Обработчики для кнопок "Вперед/Назад"
-//   nextButton.addEventListener('click', () => {
-//     showSlide(currentSlide + 1);
-//   });
-//   prevButton.addEventListener('click', () => {
-//     showSlide(currentSlide - 1);
-//   });
+  // Обработчики для кнопок "Вперед/Назад"
+  nextButton.addEventListener('click', () => {
+    showSlide(currentSlide + 1);
+  });
+  prevButton.addEventListener('click', () => {
+    showSlide(currentSlide - 1);
+  });
 
-//   // Обработчики для точек (делегирование событий)
-//   document.querySelector('.slider-dots').addEventListener('click', function(event) {
-//     const dot = event.target.closest('.dot');
-//     if (dot) {
-//       const slideIndex = parseInt(dot.getAttribute('data-slide'));
-//       showSlide(slideIndex);
-//     }
-//   });
+  // Обработчики для точек (делегирование событий)
+  document.querySelector('.slider-dots').addEventListener('click', function(event) {
+    const dot = event.target.closest('.dot');
+    if (dot) {
+      const slideIndex = parseInt(dot.getAttribute('data-slide'));
+      showSlide(slideIndex);
+    }
+  });
 
-//   // Инициализация: показываем первый слайд
-//   showSlide(0);
-// });
+  // Инициализация: показываем первый слайд
+  showSlide(0);
+});
 
 
 
