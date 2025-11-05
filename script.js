@@ -1086,8 +1086,71 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Блюр-ховер основных и второстепенных кнопок
 
+// document.addEventListener('DOMContentLoaded', function() {
+//     const buttons = document.querySelectorAll('.button-24px, .button-32px, .button-32px-secondary, .button-64px-secondary');
+    
+//     buttons.forEach(button => {
+//         const blur = button.querySelector('.blur-effect, .blur-effect-24, .blur-effect-32-secondary, .blur-effect-64-secondary');
+        
+//         if (blur) {
+//             button.addEventListener('mousemove', function(e) {
+//                 const rect = this.getBoundingClientRect();
+//                 const x = e.clientX - rect.left;
+//                 const y = e.clientY - rect.top;
+                
+//                 // Обновляем позицию блюра
+//                 blur.style.left = x + 'px';
+//                 blur.style.top = y + 'px';
+//             });
+            
+//             button.addEventListener('mouseleave', function() {
+//                 blur.style.opacity = '0';
+//             });
+            
+//             button.addEventListener('mouseenter', function() {
+//                 blur.style.opacity = '1';
+//             });
+//         }
+//     });
+// });
+
+
+
+// Блюр-ховер основных и второстепенных кнопок
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const buttons = document.querySelectorAll('.button-24px, .button-32px, .button-32px-secondary, .button-64px-secondary, .button-24px-primery');
+    
+//     buttons.forEach(button => {
+//         const blur = button.querySelector('.blur-effect, .blur-effect-24, .blur-effect-32-secondary, .blur-effect-64-secondary');
+        
+//         if (blur) {
+//             button.addEventListener('mousemove', function(e) {
+//                 const rect = this.getBoundingClientRect();
+//                 const x = e.clientX - rect.left;
+//                 const y = e.clientY - rect.top;
+                
+//                 // Обновляем позицию блюра
+//                 blur.style.left = x + 'px';
+//                 blur.style.top = y + 'px';
+//             });
+            
+//             button.addEventListener('mouseleave', function() {
+//                 blur.style.opacity = '0';
+//             });
+            
+//             button.addEventListener('mouseenter', function() {
+//                 blur.style.opacity = '1';
+//             });
+//         }
+//     });
+// });
+
+
+
+// Блюр-ховер основных и второстепенных кнопок
 document.addEventListener('DOMContentLoaded', function() {
-    const buttons = document.querySelectorAll('.button-24px, .button-32px, .button-32px-secondary, .button-64px-secondary');
+    const buttons = document.querySelectorAll('.button-24px, .button-32px, .button-32px-secondary, .button-64px-secondary, .button-24px-primery, a.button-24px, a.button-32px, a.button-32px-secondary, a.button-64px-secondary');
     
     buttons.forEach(button => {
         const blur = button.querySelector('.blur-effect, .blur-effect-24, .blur-effect-32-secondary, .blur-effect-64-secondary');
@@ -1098,7 +1161,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
                 
-                // Обновляем позицию блюра
                 blur.style.left = x + 'px';
                 blur.style.top = y + 'px';
             });

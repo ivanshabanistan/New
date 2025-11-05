@@ -245,6 +245,12 @@ svg * {
   }
 }
 
+/* Отступ под меню при скролле до якорных точек */
+#behance-section,
+#awwwards-section {
+    scroll-margin-top: 76px;
+}
+
 
 :root {
   --color-label-light-primary-100:   rgba(0, 0, 0, 1);     /* #000000, 100% */
@@ -318,7 +324,7 @@ svg * {
   --font-line-height-h-5: 42px;
   --font-line-height-h-6: 36px;
   --font-line-height-body-1: 20px;
-  --font-line-height-body-2: 17px;
+  --font-line-height-body-2: 18px;
   --font-line-height-caption: 12px;
   --font-letter-spacing-h-1-roman: -24px;
   --font-letter-spacing-h-1-medium: -24px;
@@ -693,7 +699,7 @@ a {
   transition: 0.15s ease-out;
 }
 
-.button-copy__tooltip {
+/* .button-copy__tooltip {
   position: relative;
 }
 
@@ -741,7 +747,7 @@ a {
 .button-copy__tooltip:hover::before {
   opacity: 1;
   visibility: visible;
-}
+} */
 
 .button-email {
   border-radius: 28px;
@@ -1187,6 +1193,11 @@ a {
   padding-top: 8px;
 }
 
+
+
+/* Кнопка слайдера с наградами */
+
+/* Старая кнопка слайдера с наградами */
 .button-details {
   position: absolute;
   font-family: var(--font-family);
@@ -1204,6 +1215,69 @@ a {
   margin-left: -4px;
   
 }
+
+/* Новая кнопка слайдера с наградами */
+
+.button-24px-primery {
+  font-family: var(--font-family);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-roman);
+  letter-spacing: var(--font-letter-spacing-caption);
+  line-height: var(--font-line-height-caption);
+  text-decoration: none;
+  
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 24px;
+  padding: 8px 20px 6px 20px;
+  border-radius: 28px;
+  background-color: var(--color-systemBackgrounds-dark-primary-100);
+  position: relative;
+  overflow: hidden;
+  
+  cursor: pointer;
+}
+ 
+
+.blur-effect {
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  background: rgb(122, 122, 122);
+  mix-blend-mode: difference;
+  border-radius: 100%;
+  filter: blur(28px);
+  opacity: 0;
+  transition: opacity 3.9s ease; /* Медленное исчезновение ховера/блюра */
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  top: var(--mouse-y, 50%);
+  left: var(--mouse-x, 50%);
+  z-index: 1;
+}
+
+.button-24px-primery:hover .blur-effect {
+  opacity: 1;
+  transition: opacity 0.01s ease; /* Быстрое появление ховера/блюра */
+}
+
+.button-text-24px-primery {
+  position: relative;
+  z-index: 2;
+  color: var(--color-label-dark-primary-100);
+  text-decoration: none;
+}
+
+.button-24px-primery-slider {
+  position: absolute;
+  width: 100px;
+  left: -4px;
+  bottom: -4px;
+}
+
+
 
 .awards-number-slider {
   color: var(--color-label-light-primary-100);
@@ -1591,6 +1665,13 @@ color: var(--color-label-light-tertiary-30);
   position: relative;
   overflow: hidden;
   cursor: pointer;
+
+  font: var(--font-family);
+  font-weight: var(--font-weight-roman);
+  font-size: var(--font-size-body-2);
+  line-height: var(--font-letter-spacing-body-2-roman);
+  letter-spacing: var(--font-letter-spacing-body-2-roman);
+  
 }
  
  /* .button-32px {
@@ -1653,7 +1734,7 @@ color: var(--color-label-light-tertiary-30);
 .awards-section-header,
 .section-header {
   width: 100%;
-  font-family: HelveticaNeueCyr;
+  font-family: var(--font-family);
   font-size: var(--font-size-caption);
   font-weight: var(--font-weight-roman);
   letter-spacing: var(--font-letter-spacing-caption);
@@ -2228,6 +2309,12 @@ color: var(--color-label-light-tertiary-30);
   color: var(--color-label-light-primary-100);
   text-decoration: none;
   transition: color 1.5s ease; /* Медленный возврат при уходе */
+
+  font: var(--font-family);
+  font-weight: var(--font-weight-roman);
+  font-size: var(--font-size-body-2);
+  line-height: var(--font-letter-spacing-body-2-roman);
+  letter-spacing: var(--font-letter-spacing-body-2-roman);
 }
 
 .button-24px:hover {
@@ -2505,6 +2592,12 @@ color: var(--color-label-light-tertiary-30);
   color: var(--color-label-light-primary-100);
   text-decoration: none;
   transition: color 1.5s ease; /* Медленный возврат при уходе */
+
+  font: var(--font-family);
+  font-weight: var(--font-weight-roman);
+  font-size: var(--font-size-body-2);
+  line-height: var(--font-letter-spacing-body-2-roman);
+  letter-spacing: var(--font-letter-spacing-body-2-roman);
 }
 
 .button-32px-secondary:hover {
@@ -3490,6 +3583,8 @@ color: var(--color-label-light-tertiary-30);
   color: var(--color-label-light-secondary-60);
 }
 
+
+
 /* Секция о видах услуг */
 .services-section {
   display: flex;
@@ -3797,11 +3892,13 @@ color: var(--color-label-light-tertiary-30);
 .button-text-64px-secondary {
   position: relative;
   z-index: 2;
-  font-family: HelveticaNeueCyr;
+  
+  font-family: var(--font-family);
   font-size: var(--font-size-h-6);
   font-weight: var(--font-weight-roman);
-  letter-spacing: var(--font-letter-spacing-h-6-roman);
   line-height: var(--font-line-height-h-6);
+  letter-spacing: var(--font-letter-spacing-h-6-roman);
+  
   color: var(--color-label-light-primary-100);
   text-decoration: none;
   transition: color 1.5s ease; /* Медленный возврат при уходе */
